@@ -1,9 +1,6 @@
-h1 {
-  color: red;
-}
 
 
-#index-title {
+#about-title {
   text-align: center;
   font-size: 15px;
   color: blue;
@@ -22,4 +19,14 @@ section {
   border-width: 5px;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
+}
+
+
+.social-btn {
+  border-style: solid;
+  height: 50px;
+  width: 50px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 30px;
 }
