@@ -1,5 +1,11 @@
-require 'rails_helper'
+<div class="media">
+  <div class="media body">
+    <h4 class ="media heading">
+      <%= @post.body %></p>
+      </h4>
+  </div>
+</div>
 
-RSpec.describe "posts/show.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+<div class="back link">
+  <h4><%= link_to "Back", :back %> </h4>
+</div>

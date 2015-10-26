@@ -19,6 +19,12 @@ posts = Post.all
   )
 end
 
+Advertisement.create!(
+  title: 'Advertisements'
+  copy: "New"
+  price: 25
+)
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
