@@ -49,9 +49,9 @@
 
        it "redirects to new post" do
          post :create, post: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
-         expect(resonse).to redirect_to Post.last
+         expect(response).to redirect_to Post.last
        end
-     end
+    end
 
      describe "GET show" do
      it "returns http success" do
