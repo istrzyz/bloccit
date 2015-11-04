@@ -9,16 +9,6 @@
        get :index
        expect(response).to have_http_status(:success)
      end
-<<<<<<< HEAD
-=======
-   end
-
-   it "assigns [my_post] to @posts" do
-     get :index
-
-     expect(assigns(:posts)).to eq([my_post])
-   end
->>>>>>> ckpt33
 
      it "assigns [my_post] to @posts" do
        get :index
@@ -50,7 +40,6 @@
        expect{post :create, post: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Post,:count).by(1)
      end
 
-<<<<<<< HEAD
      it "assigns the new post to @post" do
        post :create, post: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
        expect(assigns(:post)).to eq Post.last
@@ -60,13 +49,6 @@
        expect(response).to redirect_to Post.last
      end
    end
-=======
-       it "redirects to new post" do
-         post :create, post: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
-         expect(response).to redirect_to Post.last
-       end
-    end
->>>>>>> ckpt33
 
    describe "GET show" do
      it "returns http success" do
@@ -83,32 +65,28 @@
        expect(assigns(:post)).to eq(my_post)
      end
    end
-<<<<<<< HEAD
-end
-=======
 
-     describe "GET edit" do
-       it "returns http success" do
-         get :edit, {id: my_post.id}
-         expect(response).to have_http_status(:success)
-       end
+   describe "GET edit" do
+     it "returns http success" do
+       get :edit, {id: my_post.id}
+       expect(response).to have_http_status(:success)
+     end
 
-       it "renders the #edit view" do
-         get :edit, {id: my_post.id}
+     it "renders the #edit view" do
+       get :edit, {id: my_post.id}
 
-         expect(response).to render_template :edit
-       end
+       expect(response).to render_template :edit
+     end
 
 
-       it "assigns post to be updated to @post" do
-         get :edit, {id: my_post.id}
+     it "assigns post to be updated to @post" do
+       get :edit, {id: my_post.id}
 
-         post_instance = assigns(:post)
+       post_instance = assigns(:post)
 
-         expect(post_instance.id).to eq my_post.id
-         expect(post_instance.title).to eq my_post.title
-         expect(post_instance.body).to eq my_post.body
-       end
+       expect(post_instance.id).to eq my_post.id
+       expect(post_instance.title).to eq my_post.title
+       expect(post_instance.body).to eq my_post.body
      end
    end
->>>>>>> ckpt33
+end
