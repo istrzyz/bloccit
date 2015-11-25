@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.find(user_params)
 
     if @user.save
       flash[:notice] = "Welcome to Bloccit #{@user.name}!"
