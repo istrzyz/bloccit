@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find(user_params)
+    @user = User.new(user_params)
 
     if @user.save
       flash[:notice] = "Welcome to Bloccit #{@user.name}!"
@@ -13,10 +13,10 @@ class UsersController < ApplicationController
       flash[:error] = "There was an error creating your account. Please try again."
       render :new
     end
+  end
 
-    def confirm
-      @user = User.new(user_params)
-    end
+  def confirm
+    @user = User.new(user_params)
   end
 
   private
