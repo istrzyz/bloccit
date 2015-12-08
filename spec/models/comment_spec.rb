@@ -2,7 +2,6 @@ require 'rails_helper'
 include RandomData
 
 RSpec.describe Comment, type: :model do
-  describe "attributes" do
     let(:topic) { create(:topic)}
     let(:user) { create(:user)}
     let(:post) { create(:post)}
@@ -15,7 +14,7 @@ RSpec.describe Comment, type: :model do
       it { should validate_length_of(:body).is_at_least(5)}
 
 
-
+  describe "attributes" do
     it "should respond to body" do
       expect(comment).to respond_to(:body)
     end
