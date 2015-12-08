@@ -22,4 +22,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts.visible_to(current_user)
+  end
 end
