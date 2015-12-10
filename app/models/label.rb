@@ -6,10 +6,8 @@ class Label < ActiveRecord::Base
    belongs_to :labelable, polymorphic: true
 
    def self.update_labels(label_string)
- # #24
      return Label.none if label_string.blank?
 
-# #25
 
      label_string.split(",").map do |label|
        Label.find_or_create_by(name: label.strip)
