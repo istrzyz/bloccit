@@ -6,6 +6,8 @@ RSpec.describe Comment, type: :model do
     let(:user) { create(:user)}
     let(:post) { create(:post)}
     let(:comment) { create(:comment) }
+    let(:label) { create(:label) }
+    let(:vote) { create(:vote) }
 
       it { should belong_to(:post)}
       it { should belong_to(:user)}

@@ -28,6 +28,10 @@ class CommentsController < ApplicationController
      flash[:error] = "Comment couldn't be deleted. Try again."
      redirect_to [@post.topic, @post]
    end
+
+   def show
+     @comment = Comment.find(params[:id])
+   end
   end
 
   private
